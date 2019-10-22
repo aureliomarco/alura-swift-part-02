@@ -9,30 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    // Force Unwrapping
-    // Está dizendo ao swift que esta variável terá um valor
-    // É a exclamação (!) no final de UITextField
-
+    
+    var tableViewController: RefeicoesTableViewController?
+    
     @IBOutlet var nomeTextField: UITextField?
     @IBOutlet weak var felicidadeTextField: UITextField?
     
     @IBAction func adicionar(_ sender: Any) {
-        // if let
-        /*
-        if let nomeDaRefeicao = nomeTextField?.text, let felidadeDaRefeicao = felicidadeTextField?.text {
-            let nome = nomeDaRefeicao
-            if let felicidade = Int(felidadeDaRefeicao) {
-                let refeicao = Refeicao(nome: nome, felicidade: felicidade)
-                
-                print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
-            } else {
-                print("Erro ao tentar criar a refeição")
-            }
-        }
-        */
-        
-        // guard let
+
         guard let nomeDaRefeicao = nomeTextField?.text else {
             return
         }
@@ -43,6 +27,9 @@ class ViewController: UIViewController {
         
         let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade)
         print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
+        
+        tableViewController?.add(refeicao)
+        navigationController?.popViewController(animated: true)
     }
 }
 
