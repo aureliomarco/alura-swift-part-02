@@ -49,7 +49,7 @@
                     <navigationItem key="navigationItem" id="Ua8-E8-H2c">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="5Dv-Rg-baH">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="6UQ-vo-9jg"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="adicionar" id="6UQ-vo-9jg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -112,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92" y="26"/>
+            <point key="canvasLocation" x="90" y="25"/>
         </scene>
     </scenes>
 </document>

@@ -33,10 +33,10 @@ class RefeicoesTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let viewControoler = segue.destination as? ViewController {
-            viewControoler.tableViewController = self
+        if segue.identifier == "adicionar" {
+            if let viewControoler = segue.destination as? ViewController {
+                viewControoler.tableViewController = self
+            }
         }
-        
-        
     }
 }
