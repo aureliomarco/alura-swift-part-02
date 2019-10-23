@@ -14,10 +14,16 @@ protocol AdicionaRefeicaoDelegate {
 
 class ViewController: UIViewController {
     
+    // MARK: - Atributos
+    
     var delegate: AdicionaRefeicaoDelegate?
+    
+    // MARK: - IBOutlets
     
     @IBOutlet var nomeTextField: UITextField?
     @IBOutlet weak var felicidadeTextField: UITextField?
+    
+    // MARK: - IBActions
     
     @IBAction func adicionar(_ sender: Any) {
         guard let nomeDaRefeicao = nomeTextField?.text else {
@@ -35,4 +41,3 @@ class ViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
 }
-
